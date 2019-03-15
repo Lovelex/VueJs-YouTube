@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aula 02 - diretivas if, else e show </title>
+</head>
+
+<div id="app">
+  <h2 v-if="status">
+    {{ vif }}
+  </h2>
+
+  <h2 v-else>
+    {{ velse }}
+  </h2>
+
+  <h2 v-show="status">
+    {{ vshow }}
+  </h2>
+
+</div>
+
+<body>
+
+</body>
+<script src="https://unpkg.com/vue"></script>
+<script>
+  var app = new Vue({
+    el:'#app',
+    data: {
+      status: false,
+      vshow: 'v-show - quando falso ele ESCONDE o elemento',
+      vif: 'v-if - quando falso ele ELIMINA o elemento',
+      velse: 'v-else - else comum'
+    }
+  })
+</script>
+
+</html>

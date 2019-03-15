@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aula04 - v-for</title>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="(item, index) in cursos"> {{ index + 1 }} - {{ item.nome }}</li>
+    </ul>
+  </div>  
+  
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      var app = new Vue({
+        el:'#app',
+        data: {
+          cursos: [
+            {nome: 'VueJs'},
+            {nome: 'JavsaScript'},
+            {nome: 'Python'},
+            {nome: 'ReactNative'},
+            {nome: 'Sass'}
+          ]
+        }
+      })
+    </script>
+</body>
+</html>

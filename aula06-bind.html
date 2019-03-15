@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>aula06 - v-bind: ou : </title>
+  <style>
+    .red{
+      color: crimson;
+    }
+    .blue{
+      color: dodgerblue;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h1 v-bind:class="classBlue"> v-bind altera qualquer atributo em uma tag HTML </h1>
+    <!-- v-bind identifica a tag class. Não precisa usar .red ou .blue -->
+  </div>
+  
+  <script src="https://unpkg.com/vue"></script>
+  <script>
+      var app = new Vue({
+        el:'#app',
+        data: {
+          classRed: 'red',
+          classBlue : 'blue'
+        }
+      })
+    </script>
+</body>
+</html>

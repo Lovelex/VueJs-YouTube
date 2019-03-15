@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="app">
+      <button :class="btn.enviar" :style="style.enviar">Enviar</button>
+      <button :class="btn.editar" :style="style.editar">Editar</button>
+      <button :class="btn.excluir" :style="style.excluir">Excluir</button>
+    </div>
+  </body>
+
+  <script src="https://unpkg.com/vue"></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        btn: {
+          enviar: ['btn', 'btn-primary'],
+          editar: {'btn': true, 'btn-warning': true },
+          excluir: [ {'btn': true,}, {'btn-danger': true} ]
+        },
+        style: {
+          enviar: { 'font-size': '10px' },
+          editar: [ { 'font-size': '20px' } ],
+          excluir: [ { 'font-size': '30px' }, { 'text-transform': 'lowercase' } ]
+        }
+      }
+    })
+  </script>
+</html>
