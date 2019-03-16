@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <title>Aula10 - Computed e Watch</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <div id="app">
+        <input v-model='firstName' placeholder="First Name" type="text">
+        <input v-model="lastName" placeholder="Last Name" type="text">
+        <h1>
+          {{fullName}}
+        </h1>
+      </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      var app = new Vue({
+        el:'#app',
+        data(){
+          return {
+            firstName: '',
+            lastName: ''
+          }
+        },
+        computed:{
+          fullName(){
+            return `${this.firstName} ${this.lastName}` 
+          }
+        },
+        watch:{
+          firstName(newValue, oldValue){
+            console.log('oldValue', oldValue)
+            console.log('newValue', newValue)
+          }
+        }
+      })
+    </script>
+  </body>
+</html>

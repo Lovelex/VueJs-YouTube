@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <title>Aula08 - v-on</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="app">
+      <form action="https://google.com.br">
+        <button class="btn btn-primary" @click.prevent.stop="enviar()">Enviar</button>
+        <!-- @ ou v-on: -->
+      </form>
+    </div>  
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      var app = new Vue({
+        el: '#app',
+        methods: {
+          enviar(){
+            alert('Enviado')
+          }
+        }
+      }) 
+    
+    </script>
+  </body>
+</html>

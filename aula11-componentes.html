@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aula11 - Componentes</title>
+</head>
+<body>
+  <div id="app">
+    <side-menu></side-menu>
+    <side-menu></side-menu>
+    <side-menu></side-menu>
+  </div>
+  <template id="template">
+    <ul>
+      <li>Abacaxi</li>
+      <li>Banana</li>
+      <li>Cajú</li>
+    </ul>
+  </template>
+
+  <script src="https://unpkg.com/vue"></script>
+  <script>
+    Vue.component('side-menu',{
+      template: '#template'
+    })
+    new Vue({
+      el: '#app',
+      data(){
+        return {
+          teste: 'teste'
+        }
+      }
+    })
+  </script>
+</body>
+</html>
